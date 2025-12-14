@@ -1,0 +1,63 @@
+.content {
+   padding: 20px 10px;
+   border: 2px solid #6A5449;
+   border-radius: 4px;
+}
+
+.title {
+   font-size: 1.5em;
+   font-weight: bold;
+   color: #6A5449;
+   padding: 0 0 20px 0
+}
+
+.grid {
+   align-items: start;
+   display: grid;
+   grid-template-columns: 100px auto;
+   grid-gap: 10px;
+   width: 100%;
+   margin: 0 0 auto;
+   min-width: 80px;
+   font-size: 18px;
+}
+
+.row {
+   display: contents;
+}
+
+.cellFull {
+   padding: 3px;
+   text-align: left;
+   grid-column: 1 / 3;
+   width: 100%;
+}
+
+.cellLeft {
+   color: #6A5449;
+   padding: 3px;
+   text-align: left;
+   grid-column: 1 / 2;
+}
+
+.cellRight {
+   color: #6A5449;
+   padding: 3px;
+   text-align: left;
+   grid-column: 2 / 3;
+}
+
+.cellRightSmall {
+   color: #6A5449;
+   font-size: 14px;
+   padding: 3px;
+   text-align: left;
+   grid-column: 2 / 3;
+}
+
+.numInput[type="number"] {
+   color: #6A5449;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   font-size: 18px;
+   width: 50px;
+}

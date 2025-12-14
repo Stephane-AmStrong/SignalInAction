@@ -1,0 +1,20 @@
+<div class="container">
+   <div class="navbar">
+      <div class="title">{{pageTitle}}</div>
+      <nav>
+         <ul class="nav-links">
+            <li>
+               <a [routerLink]="['/home']">Home</a>
+            </li>
+            <li>
+               <a [routerLink]="['/vehicles']">Vehicle List</a>
+            </li>
+            <li>
+               <a [routerLink]="['/films']">Film Details</a>
+            </li>
+         </ul>
+      </nav>
+   </div>
+
+   <router-outlet></router-outlet>
+</div>
