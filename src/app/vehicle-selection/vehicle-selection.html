@@ -1,5 +1,8 @@
+<h1>Star Wars Vehicle Sales</h1>
 @if (isLoading()) {
 <div>... loading vehicles</div>
+} @else if (errorMessage()){
+<div style='color: red'>An error occurred: {{ errorMessage() }}</div>
 } @else {
 <select class="select" [(ngModel)]="selectedVehicle">
     <option value="undefined" disabled selected>--Select a vehicle--</option>

@@ -1,7 +1,8 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { computed, effect, inject, Injectable, linkedSignal, signal } from '@angular/core';
 import { rxResource } from '@angular/core/rxjs-interop';
 import { delay, map } from 'rxjs';
+import { setErrorMessage } from './error-message';
 
 @Injectable({
   providedIn: 'root',
@@ -29,6 +30,8 @@ export class VehiculeService {
 
   vehicles = computed(() => this.vehiclesResource.value() ?? []);
   isLoading = this.vehiclesResource.isLoading;
+  error = computed(()=> this.vehiclesResource.error() as HttpErrorResponse);
+  errorMessage = computed(()=> setErrorMessage(this.error(), "Vehicle"))
   loadingEff = effect(() => console.log('Loading indicator:', this.vehiclesResource.isLoading()))
 }
 

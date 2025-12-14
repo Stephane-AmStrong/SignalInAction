@@ -17,4 +17,5 @@ export class VehicleSelection {
   total = this.vehicleService.total;
   color = this.vehicleService.color;
   isLoading = this.vehicleService.isLoading;
+  errorMessage = this.vehicleService.errorMessage;
 }
