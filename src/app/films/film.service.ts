@@ -37,8 +37,7 @@ export class FilmService {
          start: this.startRange(),
          end: this.endRange()
       }),
-      stream: ({ params }) => this.http.get<Film>(
-         `${this.filmUrl}?start=${params.start}&end=${params.end}`)
+      stream: ({ params }) => this.http.get<Film>(`${this.filmUrl}?start=${params.start}&end=${params.end}`)
    });
 
    private filmResource = rxResource({
