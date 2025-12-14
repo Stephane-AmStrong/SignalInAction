@@ -1,0 +1,14 @@
+@if (isLoading()) {
+<div>... loading vehicles</div>
+} @else {
+<select class="select" [(ngModel)]="selectedVehicle">
+    <option value="undefined" disabled selected>--Select a vehicle--</option>
+    @for(vehicle of vehicles(); track vehicle) {
+    <option [ngValue]='vehicle'>{{ vehicle.name }}</option>
+    }
+</select>
+<div>Quantity: <input type='number' [(ngModel)]='quantity'></div>
+<div>Vehicle: {{ selectedVehicle()?.name }}</div>
+<div>Price: {{ selectedVehicle()?.cost_in_credits }}</div>
+<div [style.color]='color()'>Total: {{ total() }}</div>
+}
